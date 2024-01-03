@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="rubiksCubeCanvas" width="300" height="300"></canvas>
+<script>
+    const canvas = document.getElementById('rubiksCubeCanvas');
+const ctx = canvas.getContext('2d');
+
+const cubeSize = 3; // 3x3x3 Rubik's Cube
+
+const colors = ['#FFD700', '#FF0000', '#008000', '#FFFFFF', '#0000FF', '#FFA500']; // Different face colors
+
+const squareSize = canvas.width / cubeSize;
+
+// Function to draw a single face of the cube
+function drawFace(x, y, color) {
+  ctx.fillStyle = color;
+  ctx.fillRect(x * squareSize, y * squareSize, squareSize, squareSize);
+  ctx.strokeStyle = '#000';
+  ctx.strokeRect(x * squareSize, y * squareSize, squareSize, squareSize);
+}
+
+// Function to draw the entire cube
+function drawRubiksCube() {
+  for (let row = 0; row < cubeSize; row++) {
+    for (let col = 0; col < cubeSize; col++) {
+      const color = colors[Math.floor(Math.random() * colors.length)];
+      drawFace(col, row, color);
+    }
+  }
+}
+
+// Drawing the Rubik's Cube
+drawRubiksCube();
+
+</script>
+</body>
+</html>

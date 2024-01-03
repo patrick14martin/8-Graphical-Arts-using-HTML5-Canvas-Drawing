@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="mountainCanvas" width="400" height="200"></canvas>    
+    <script>
+const canvas = document.getElementById('mountainCanvas');
+const ctx = canvas.getContext('2d');
+
+
+ctx.fillStyle = '#87CEEB';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+ctx.beginPath();
+ctx.moveTo(10, 350);
+ctx.lineTo(200, 20);
+ctx.lineTo(400, 250);
+ctx.closePath();
+ctx.fillStyle = '#A9A9A9';
+ctx.fill();
+
+
+ctx.beginPath();
+ctx.arc(350, 50, 30, 0, Math.PI * 2);
+ctx.fillStyle = '#FFD700';
+ctx.fill();
+
+    </script>
+    
+
+</body>
+</html>

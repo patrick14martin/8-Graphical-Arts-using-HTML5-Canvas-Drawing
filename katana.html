@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="katanaCanvas" width="300" height="200"></canvas>
+<script>
+    const canvas = document.getElementById('katanaCanvas');
+const ctx = canvas.getContext('2d');
+
+// Background
+ctx.fillStyle = '#D9D9D9';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+// Blade
+ctx.beginPath();
+ctx.moveTo(20, 45);
+ctx.lineTo(270, 50);
+ctx.lineTo(250, 60);
+ctx.lineTo(150, 70);
+ctx.closePath();
+ctx.fillStyle = '#C0C0C0';
+ctx.fill();
+
+// Handle
+ctx.fillStyle = '#8B4513';
+ctx.fillRect(20, 45, 40, 10);
+
+// Details on handle
+ctx.fillStyle = '#A0522D';
+ctx.fillRect(30, 45, 20, 10);
+
+</script>
+</body>
+</html>

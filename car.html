@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="carCanvas" width="200" height="150"></canvas>
+  <script>
+    const canvas = document.getElementById('carCanvas');
+const ctx = canvas.getContext('2d');
+
+
+ctx.fillStyle = '#2E86C1';
+ctx.fillRect(20, 30, 160, 50);
+
+
+ctx.beginPath();
+ctx.moveTo(20, 30);
+ctx.lineTo(40, 10);
+ctx.lineTo(180, 10);
+ctx.lineTo(200, 30);
+ctx.fillStyle = '#3498DB';
+ctx.fill();
+
+
+ctx.beginPath();
+ctx.arc(50, 80, 15, 0, Math.PI * 2);
+ctx.arc(150, 80, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#000';
+ctx.fill();
+
+
+ctx.fillStyle = '#85C1E9';
+ctx.fillRect(60, 20, 40, 20);
+ctx.fillRect(100, 20, 60, 20);
+
+  </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+ 
+<canvas id="mangoCanvas" width="200" height="200"></canvas>   
+<script>
+    const canvas = document.getElementById('mangoCanvas');
+const ctx = canvas.getContext('2d');
+
+
+ctx.fillStyle = '#FFFFCC';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+ctx.beginPath();
+ctx.moveTo(30, 90);
+ctx.bezierCurveTo(10, 60, 20, 20, 80, 10);
+ctx.bezierCurveTo(140, 0, 170, 40, 170, 90);
+ctx.bezierCurveTo(170, 140, 140, 180, 80, 190);
+ctx.bezierCurveTo(20, 200, 10, 160, 30, 90);
+ctx.closePath();
+ctx.fillStyle = '#FFD700';
+ctx.fill();
+
+
+ctx.lineWidth = 3;
+ctx.strokeStyle = '#DAA520';
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(30, 90);
+ctx.bezierCurveTo(50, 80, 50, 120, 30, 150);
+ctx.lineWidth = 2;
+ctx.stroke();
+
+ctx.beginPath();
+ctx.moveTo(80, 10);
+ctx.lineTo(90, 30);
+ctx.lineWidth = 4;
+ctx.strokeStyle = '#663300';
+ctx.stroke();
+
+</script>
+</body>
+</html>
+
+

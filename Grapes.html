@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="grapesCanvas" width="200" height="200"></canvas>
+   <script>
+    const canvas = document.getElementById('grapesCanvas');
+const ctx = canvas.getContext('2d');
+
+
+ctx.fillStyle = '#E6E6FA';
+ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+
+ctx.beginPath();
+ctx.moveTo(100, 50);
+ctx.lineTo(100, 150);
+ctx.lineWidth = 4;
+ctx.strokeStyle = '#008000';
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.arc(80, 70, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(105, 70, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(130, 70, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(85, 100, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(115, 100, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+ctx.beginPath();
+ctx.arc(100, 129, 15, 0, Math.PI * 2);
+ctx.fillStyle = '#800080';
+ctx.fill();
+
+   </script>
+</body>
+</html>
